@@ -283,7 +283,15 @@
         }
         var line_def = {
           data: default_data,
-          color: '#FFF'
+          color: '#000',
+          lines: {
+              show: false,
+              fill: false,
+            },
+            points: {
+              show: false,
+            },
+
         };
         var my_plot_sdr = $.plot(elementId, [line_def, data], {
           grid: {
@@ -295,11 +303,11 @@
           series: {
             shadowSize: 0,
             lines: {
-              show: [false, true],
-              fill: [false, true],
+              show: true,
+              fill: true,
             },
             points: {
-              show: [false, false],
+              show: true,
             },
           },
           yaxis: {

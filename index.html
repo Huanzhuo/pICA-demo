@@ -68,10 +68,10 @@
             </div>
             <div class="col-md-5">
               <!-- Line chart -->
-              <div class="card card-danger" id='title_pica'>
+              <div class="card card-primary" id='title_pica'>
                 <!-- Card -->
-                <div class="card-header">
-                  <label style="margin-bottom: -15pt;margin-top: -15pt;font-size:x-large;">Computing in Network
+                <div class="card-header" style="background-color:#0077BB">
+                  <label style="margin-bottom: -15pt;margin-top: -15pt;font-size:x-large;">In-Network Computing
                     (pICA)</label>
                   <br>
                   <label id='info_pica' style="margin-bottom: -15pt;font-size: large;">Accuracy: 0% &nbsp; / &nbsp;
@@ -87,14 +87,14 @@
                 <!-- Card -->
                 <h3 class="card-title" style="margin-left: 15pt;margin-top: 5pt;">
                   <i class="far fa-chart-bar"></i>
-                  Topology
+                  Network Topology
                 </h3>
                 <div class="card-body">
                   <div id="topology_pica"
                     style="height: 4.5vw; background-image: url('topo_s7.svg'); background-size:100%;"></div>
-                  <h3 class="card-title"><i class="fas fa-stop" style="color: #0F0;"></i>&nbsp;Transmission Active</h3>
+                  <h3 class="card-title"><i class="fas fa-stop" style="color: rgb(78, 158, 78);"></i>&nbsp;Transmission Active</h3>
                   <h3 class="card-title" style="visibility: hidden;">####</h3>
-                  <h3 class="card-title"><i class="fas fa-stop" style="color: #F00;"></i>&nbsp;Computing Active</h3>
+                  <h3 class="card-title"><i class="fas fa-stop" style="color: rgb(214, 76, 76);"></i>&nbsp;Computing Active</h3>
                 </div>
                 <!-- Card -->
                 <h3 class="card-title" style="margin-left: 15pt;margin-top:5pt;">
@@ -107,7 +107,7 @@
 
                 <div class="info-box-content" style="margin-left: 15pt;margin-right: 15pt;margin-top: 5pt;">
                   <div class="progress">
-                    <div id="progress_pica" class="progress-bar" style="background-color:#dc3545;width: 0%;"></div>
+                    <div id="progress_pica" class="progress-bar" style="background-color:#0077BB;width: 0%;"></div>
                   </div>
                   <span id="progressinfo_pica" class="progress-description">
                     0% of the data was transferred
@@ -123,8 +123,8 @@
               <!-- Line chart -->
               <div class="card card-purple" id='title_fastica'>
                 <!-- Card -->
-                <div class="card-header">
-                  <label style="margin-bottom: -15pt;margin-top: -15pt;font-size:x-large;">Store-Forward
+                <div class="card-header" style="background-color:#CCBB44">
+                  <label style="margin-bottom: -15pt;margin-top: -15pt;font-size:x-large;">Store-and-Forward
                     (FastICA)</label>
                   <br>
                   <label id='info_fastica' style="margin-bottom: -15pt;font-size: large;">Accuracy: 0% &nbsp; / &nbsp;
@@ -140,14 +140,14 @@
                 <!-- Card -->
                 <h3 class="card-title" style="margin-left: 15pt;margin-top: 5pt;">
                   <i class="far fa-chart-bar"></i>
-                  Topology
+                  Network Topology
                 </h3>
                 <div class="card-body">
                   <div id="topology_fastica"
                     style="height: 4.5vw; background-image: url('topo_s7.svg'); background-size:100%;"></div>
-                  <h3 class="card-title"><i class="fas fa-stop" style="color: #0F0;"></i>&nbsp;Transmission Active</h3>
+                  <h3 class="card-title"><i class="fas fa-stop" style="color: rgb(78, 158, 78);"></i>&nbsp;Transmission Active</h3>
                   <h3 class="card-title" style="visibility: hidden;">####</h3>
-                  <h3 class="card-title"><i class="fas fa-stop" style="color: #F00;"></i>&nbsp;Computing Active</h3>
+                  <h3 class="card-title"><i class="fas fa-stop" style="color: rgb(214, 76, 76);"></i>&nbsp;Computing Active</h3>
                 </div>
                 <!-- Card -->
                 <h3 class="card-title" style="margin-left: 15pt;margin-top: 5pt;">
@@ -160,7 +160,7 @@
 
                 <div class="info-box-content" style="margin-left: 15pt;margin-right: 15pt;margin-top: 5pt;">
                   <div class="progress">
-                    <div id="progress_fastica" class="progress-bar" style="background-color:#605ca8;width: 0%;"></div>
+                    <div id="progress_fastica" class="progress-bar" style="background-color:#CCBB44;width: 0%;"></div>
                   </div>
                   <span id="progressinfo_fastica" class="progress-description">
                     0% of the data was transferred
@@ -369,15 +369,15 @@
         for (var i = 0; i < 9; i += 1) {
           if (en_trans[i]) {
             var dot = paper.rect((pos_start + i * pos_width) * w - 30 * unit, 0.50 * h, 25 * unit, 45 * unit).attr({
-              fill: "#0F0",
-              stroke: "#0F0",
+              fill: "rgb(78, 158, 78)",
+              stroke: "rgb(78, 158, 78)",
               "stroke-width": 1
             });
           };
           if (en_procs[i]) {
             var dot = paper.rect((pos_start + i * pos_width) * w + 5 * unit, 0.50 * h, 25 * unit, 45 * unit).attr({
-              fill: "#F00",
-              stroke: "#F00",
+              fill: "rgb(214, 76, 76)",
+              stroke: "rgb(214, 76, 76)",
               "stroke-width": 1
             });
           };
@@ -493,15 +493,15 @@
 
 
       var id = 2;
-      displayAll('pica', data_pica_xs[id], 0, '#dc3545', paper_pica, 6.3);
-      displayAll('fastica', data_fastica_xs[id], 0, '#605ca8', paper_fastica, 6.3);
+      displayAll('pica', data_pica_xs[id], 0, '#0077BB', paper_pica, 6.3);
+      displayAll('fastica', data_fastica_xs[id], 0, '#CCBB44', paper_fastica, 6.3);
 
       var current_time = 0;
       var en_running = 'off';
 
       function update(data_pica_xs, data_fastica_xs, paper_pica, paper_fastica) {
-        displayAll('pica', data_pica_xs, current_time, '#dc3545', paper_pica, 6.3);
-        displayAll('fastica', data_fastica_xs, current_time, '#605ca8', paper_fastica, 6.3);
+        displayAll('pica', data_pica_xs, current_time, '#0077BB', paper_pica, 6.3);
+        displayAll('fastica', data_fastica_xs, current_time, '#CCBB44', paper_fastica, 6.3);
         if (en_running === 'on') {
           current_time += 0.025;
           setTimeout(update, 100, data_pica_xs, data_fastica_xs, paper_pica, paper_fastica);

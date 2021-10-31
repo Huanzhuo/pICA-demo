@@ -124,7 +124,7 @@
               <div class="card card-purple" id='title_fastica'>
                 <!-- Card -->
                 <div class="card-header" style="background-color:#CCBB44">
-                  <label style="margin-bottom: -15pt;margin-top: -15pt;font-size:x-large;">Store-and-Forward
+                  <label style="margin-bottom: -15pt;margin-top: -15pt;font-size:x-large;">Centralized
                     (FastICA)</label>
                   <br>
                   <label id='info_fastica' style="margin-bottom: -15pt;font-size: large;">Accuracy: 0% &nbsp; / &nbsp;
@@ -205,8 +205,8 @@
   <script src="plugins/flot/plugins/jquery.flot.pie.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="dist/js/demo.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script>
-  <!-- Page specific script -->
+  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> -->
+  <script src="plugins/raphael/raphael.min.js"></script>
   <script>
 
     $(function () {
@@ -382,7 +382,7 @@
             });
           };
           if (en_proceds[i] > 0) {
-            console.log(Math.round(en_proceds[i] * 15).toString(16));
+            // console.log(Math.round(en_proceds[i] * 15).toString(16));
             _factor = 1 - en_proceds[i];
             _color = "#F" + Math.round(_factor * 15).toString(16) + Math.round(_factor * 15).toString(16);
             // _color = "#F00";
